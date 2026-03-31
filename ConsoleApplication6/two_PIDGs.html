@@ -1,0 +1,256 @@
+<table border="l"> <tr> <th>Program Graph 1</th><th>Program Graph 2</th> </tr> <tr><td>digraph G { 0 -> 1 [label="<p>y = 1</p>"]
+1 -> 2 [label="<p>x = 2</p>"]
+2 -> 3 [label="<p>x >= 1</p>"]
+2 -> 5 [label="<p>x < 1</p>"]
+3 -> 4 [label="<p>y = (y) * (x)</p>"]
+4 -> 2 [label="<p>x = x - (1)</p>"]
+}</td><td>digraph G { 0 -> 1 [label="<p>x = 2</p>"]
+1 -> 2 [label="<p>y = 2</p>"]
+2 -> 3 [label="<p>x >= 1</p>"]
+2 -> 5 [label="<p>x < 1</p>"]
+3 -> 4 [label="<p>y = (y) * (x)</p>"]
+4 -> 2 [label="<p>x = x - (1)</p>"]
+}</td></table><p>First PIDG nodes</p><table border="l"><tr> <th>№</th> <th>Действие</th> <th>Действие с абстракцией по константам</th> </tr><tr><th>0</th><td>y = 1</td><td>y = Abstract_CONST</td></tr><tr><th>1</th><td>x = 2</td><td>x = Abstract_CONST</td></tr><tr><th>2</th><td> = x >= 1</td><td> = x >= Abstract_CONST</td></tr><tr><th>3</th><td>y = (y) * (x)</td><td>y = (y) * (x)</td></tr><tr><th>4</th><td>x = x - (1)</td><td>x = x - (Abstract_CONST)</td></tr><tr><th>5</th><td> = x >= 1</td><td> = x >= Abstract_CONST</td></tr><tr><th>6</th><td>y = (y) * (x)</td><td>y = (y) * (x)</td></tr><tr><th>7</th><td>x = x - (1)</td><td>x = x - (Abstract_CONST)</td></tr><tr><th>8</th><td> = x < 1</td><td> = x < Abstract_CONST</td></tr></table><p>Second PIDG nodes</p><table border="l"><tr> <th>№</th> <th>Действие</th> <th>Действие с абстракцией по константам</th> </tr><tr><th>0</th><td>x = 2</td><td>x = Abstract_CONST</td></tr><tr><th>1</th><td>y = 2</td><td>y = Abstract_CONST</td></tr><tr><th>2</th><td> = x >= 1</td><td> = x >= Abstract_CONST</td></tr><tr><th>3</th><td>y = (y) * (x)</td><td>y = (y) * (x)</td></tr><tr><th>4</th><td>x = x - (1)</td><td>x = x - (Abstract_CONST)</td></tr><tr><th>5</th><td> = x >= 1</td><td> = x >= Abstract_CONST</td></tr><tr><th>6</th><td>y = (y) * (x)</td><td>y = (y) * (x)</td></tr><tr><th>7</th><td>x = x - (1)</td><td>x = x - (Abstract_CONST)</td></tr><tr><th>8</th><td> = x < 1</td><td> = x < Abstract_CONST</td></tr></table><p>Соответствие узлов PIDG без абстракции</p><table border='1'>
+  <tr>
+    <th></th>
+    <th>0</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+  </tr>
+  <tr>
+    <th>0</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>1</th>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>3</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>4</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>5</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>6</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>7</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>8</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+  </tr>
+</table>
+<p>Соответствие узлов PIDG с абстракцией по константам</p><table border='1'>
+  <tr>
+    <th></th>
+    <th>0</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+  </tr>
+  <tr>
+    <th>0</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>1</th>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>3</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>4</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>5</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>6</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>7</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+    <td style="background-color: #FFAAAA;">false</td>
+  </tr>
+  <tr>
+    <th>8</th>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #FFAAAA;">false</td>
+    <td style="background-color: #AAFFAA;">true</td>
+  </tr>
+</table>

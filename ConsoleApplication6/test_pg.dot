@@ -1,0 +1,8 @@
+digraph PG {
+  node [shape=circle];
+  q1 [shape=doublecircle];
+  q0;
+  q1;
+  q1;
+  q0 -> q1 [label="b arr 6 [] ="];
+}

@@ -1,0 +1,8 @@
+digraph G {
+    0 -> 1 [label="i 2 ="]
+	1 -> 2 [label="i n <"]
+	2 -> 3 [label="sum a i 1 - [] 2 * a i 2 - [] + ="]
+	3 -> 4 [label="a i sum []="]
+	4 -> 1 [label="i i 1 + ="]
+	1 -> 5 [label="i n < !"]
+}
