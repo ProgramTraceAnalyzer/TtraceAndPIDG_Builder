@@ -1,0 +1,36 @@
+digraph PG {
+  node [shape=circle];
+  q21 [shape=doublecircle];
+  q0;
+  q1;
+  q2;
+  q3;
+  q5;
+  q6;
+  q7;
+  q9;
+  q12;
+  q14;
+  q16;
+  q18;
+  q19;
+  q21;
+  q21;
+  q0 -> q1 [label="old_shift progression 1 [] progression 0 [] - ="];
+  q1 -> q2 [label="is_shift_different 0 ="];
+  q2 -> q3 [label="i 1 ="];
+  q3 -> q5 [label="i length 1 - <"];
+  q3 -> q21 [label="i length 1 - < !"];
+  q5 -> q6 [label="shift progression i 1 + [] progression i [] - ="];
+  q6 -> q12 [label="i 1 + length =="];
+  q6 -> q7 [label="i 1 + length == !"];
+  q7 -> q9 [label="old_shift shift !="];
+  q7 -> q18 [label="old_shift shift != !"];
+  q9 -> q21 [label="missing_element progression i 1 - [] shift + ="];
+  q12 -> q14 [label="progression i 1 + [] old_shift + 10 > progression i [] old_shift + 10 - < ||"];
+  q12 -> q16 [label="progression i 1 + [] old_shift + 10 > progression i [] old_shift + 10 - < || !"];
+  q14 -> q21 [label="missing_element progression 0 [] old_shift - ="];
+  q16 -> q21 [label="missing_element progression i 1 + [] old_shift + ="];
+  q18 -> q19 [label="old_shift shift ="];
+  q19 -> q3 [label="i i 1 + ="];
+}
